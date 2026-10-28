@@ -6,7 +6,7 @@
 // Platform    HackerRank
 // Language    java
 // Status      Accepted
-// Submitted   2026-10-29, 12:59 a.m.
+// Submitted   2026-10-29, 01:00 a.m.
 // Technique   nested-arraylist-lookup
 // Time        O(N + Q)
 // Space       O(N)
