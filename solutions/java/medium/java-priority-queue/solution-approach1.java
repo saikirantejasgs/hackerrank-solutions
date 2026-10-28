@@ -7,6 +7,12 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-10-29, 01:13 a.m.
+// Technique   custom-comparator-priority-queue
+// Time        O(N log N)
+// Space       O(N)
+// Insight     The implementation uses a custom comparator to enforce the three-tier priority rule: descending CGPA, ascending lexicographical name, and ascending ID.
+// Interview   Before: "How would you handle multiple sorting criteria in a priority queue?" After: "I implemented a custom Comparator to define the priority order, ensuring O(log N) insertion and removal time complexity while strictly adhering to the CGPA, name, and ID requirements."
+// Pitfalls    (1) Using Double.compare(a, b) instead of Double.compare(b, a) will reverse the CGPA priority, causing lower CGPA students to be served first.  (2) Failing to handle the case-sensitive alphabetical order requirement for names will result in incorrect sorting when CGPAs are identical.  (3) Neglecting to include the ID as the final tie-breaker violates the requirement to serve students with identical CGPA and names in ascending order of their ID.
 // ──────────────────────────────────────────────────
 
 
