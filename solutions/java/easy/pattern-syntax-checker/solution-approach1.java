@@ -7,6 +7,11 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-10-29, 12:14 a.m.
+// Technique   regex-compilation-try-catch
+// Time        O(N * M)
+// Space       O(M)
+// Insight     The solution leverages the Java Pattern.compile method to validate regex syntax by catching PatternSyntaxException during the compilation process.
+// Pitfalls    (1) Failing to handle the PatternSyntaxException will cause the program to crash on invalid regex patterns.  (2) Using next() instead of nextLine() will incorrectly skip whitespace characters that are part of the regex pattern.
 // ──────────────────────────────────────────────────
 
 import java.util.*;
