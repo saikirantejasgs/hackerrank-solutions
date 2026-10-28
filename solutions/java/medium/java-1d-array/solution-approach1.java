@@ -7,6 +7,12 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-10-29, 12:42 a.m.
+// Technique   breadth-first-search
+// Time        O(n)
+// Space       O(n)
+// Insight     The algorithm performs a breadth-first search to explore all reachable indices, marking visited cells to prevent cycles and redundant processing while checking for win conditions at each step.
+// Interview   Before: "I could use recursion to explore paths." After: "Recursion might hit stack limits on large arrays, so I used a queue-based BFS to ensure O(n) time and space complexity while correctly handling the leap and backward movement rules."
+// Pitfalls    (1) Failing to mark the starting index as visited, which allows the algorithm to re-process the origin and potentially enter an infinite loop.  (2) Neglecting to check if the destination index is within bounds before accessing the game array, which triggers an ArrayIndexOutOfBoundsException.  (3) Forgetting to check the visited array before adding a new index to the queue, leading to redundant work and potential memory exhaustion.
 // ──────────────────────────────────────────────────
 
 import java.util.*;
