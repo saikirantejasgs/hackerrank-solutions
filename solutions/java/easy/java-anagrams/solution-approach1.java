@@ -6,17 +6,11 @@
 // Platform    HackerRank
 // Language    java
 // Status      Accepted
-// Submitted   2026-10-29, 12:09 a.m.
-// Technique   frequency-array-counting
-// Time        O(n)
-// Space       O(1)
-// Insight     The algorithm verifies anagram status by incrementing counts for characters in the first string and decrementing for the second, ensuring all final frequencies are zero.
-// Interview   Before: "I would sort both strings and compare them." After: "Sorting takes O(n log n), but using a frequency array reduces this to O(n) time and O(1) space, as the alphabet size is constant at 26."
-// Pitfalls    (1) Failing to check if string lengths are equal before processing, which causes index out of bounds errors.  (2) Assuming the input contains only lowercase letters without normalizing case, violating the case-insensitive requirement.  (3) Using an array size smaller than 26, which leads to ArrayIndexOutOfBoundsException for characters like 'z'.
+// Submitted   2026-10-29, 12:11 a.m.
 // ──────────────────────────────────────────────────
 
 
-    static boolean isAnagram(String a, String b) {
+ static boolean isAnagram(String a, String b) {
         if (a.length() != b.length()) {
             return false;
         }
