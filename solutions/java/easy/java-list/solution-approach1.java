@@ -7,6 +7,12 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-10-29, 12:43 a.m.
+// Technique   array-list-dynamic-manipulation
+// Time        O(Q * N)
+// Space       O(N)
+// Insight     The implementation leverages the dynamic resizing capabilities of the ArrayList class to perform index-based insertions and deletions while maintaining the relative order of elements.
+// Interview   Before: "I would use a LinkedList to optimize insertions and deletions to O(1)." After: "Actually, for this problem, ArrayList is sufficient because the constraints on N and Q allow O(N) per operation, resulting in an overall O(Q * N) time complexity."
+// Pitfalls    (1) Using ArrayList.add(index, element) or ArrayList.remove(index) results in O(N) time complexity per operation due to element shifting.  (2) Failing to account for the index shifting that occurs after every insertion or deletion operation.  (3) Assuming that the input indices for Insert or Delete operations are always within the current bounds of the list.
 // ──────────────────────────────────────────────────
 
 import java.util.*;
