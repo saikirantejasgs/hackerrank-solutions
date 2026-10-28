@@ -7,6 +7,12 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-10-29, 01:10 a.m.
+// Technique   bitset-array-mapping
+// Time        O(M * N/W)
+// Space       O(N)
+// Insight     The implementation maps BitSet indices 1 and 2 to an array of size 3, allowing direct access to the target BitSet for each operation.
+// Interview   Before: "How would you manage two separate BitSets and perform operations on them dynamically?" After: "I used an array of BitSets to index them by their ID, achieving O(M * N/W) time complexity where W is the word size, ensuring efficient bitwise manipulation for each of the M operations."
+// Pitfalls    (1) Confusing the BitSet index (1 or 2) with the bit position index in operations like SET or FLIP.  (2) Assuming the BitSet size is fixed, whereas Java's BitSet grows dynamically if an index exceeds the initial capacity.  (3) Failing to use cardinality() to retrieve the count of set bits after each operation as required by the output format.
 // ──────────────────────────────────────────────────
 
 import java.util.*;
