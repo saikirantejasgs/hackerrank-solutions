@@ -6,7 +6,13 @@
 // Platform    HackerRank
 // Language    java
 // Status      Accepted
-// Submitted   2026-10-29, 01:00 a.m.
+// Submitted   2026-10-29, 12:59 a.m.
+// Technique   nested-arraylist-lookup
+// Time        O(N + Q)
+// Space       O(N)
+// Insight     The solution maps 1-based input coordinates to 0-based list indices by subtracting one from both the line number and the element position.
+// Interview   Before: "How would you store and query variable-length rows of integers?" After: "I used a List of Lists to store the data, allowing O(1) access per query. The total time complexity is O(N + Q), where N is the total number of integers and Q is the number of queries, while handling 1-based indexing errors."
+// Pitfalls    (1) Failing to account for 1-based indexing in the problem statement, which leads to IndexOutOfBoundsException if using raw input values.  (2) Neglecting to validate both the line index and the element position, which causes runtime errors when accessing non-existent coordinates.  (3) Using standard System.out.println inside a loop instead of StringBuilder, which significantly degrades performance for large query counts.
 // ──────────────────────────────────────────────────
 
 import java.util.*;
