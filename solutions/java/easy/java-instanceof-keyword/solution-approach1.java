@@ -7,6 +7,12 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-10-29, 01:32 a.m.
+// Technique   instanceof-type-checking
+// Time        O(N)
+// Space       O(N)
+// Insight     The implementation iterates through the ArrayList and uses the instanceof operator to classify each object into one of three distinct types, incrementing corresponding counters for each match.
+// Interview   Before: "How do I count different object types in a mixed list?" After: "You can iterate through the list and use the instanceof operator to check each element's type. This approach runs in O(N) time, where N is the number of elements in the list."
+// Pitfalls    (1) Using if-else if blocks instead of independent if statements would fail if an object could be an instance of multiple types, though not applicable here.  (2) Failing to handle the Object type returned by ArrayList.get() correctly when performing type checks.
 // ──────────────────────────────────────────────────
 
 import java.util.*;
