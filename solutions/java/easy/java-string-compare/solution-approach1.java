@@ -7,6 +7,12 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-10-29, 12:01 a.m.
+// Technique   sliding-window-lexicographical-comparison
+// Time        O(n * k)
+// Space       O(k)
+// Insight     The algorithm maintains the lexicographical minimum and maximum substrings by iterating through all possible windows of length k and updating the tracking variables based on string comparison results.
+// Interview   Before: "I would sort all substrings of length k and pick the first and last." After: "Sorting takes O(n * k * log n), but we can achieve O(n * k) by tracking the min and max during a single linear scan of the string."
+// Pitfalls    (1) The loop condition i <= s.length() - k is critical to ensure the substring index i + k does not exceed the string length.  (2) Initializing smallest and largest with the first substring assumes the string length is at least k, which is implied by the problem constraints.
 // ──────────────────────────────────────────────────
 
 
