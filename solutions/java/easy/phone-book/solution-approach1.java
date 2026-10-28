@@ -7,6 +7,12 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-10-29, 12:44 a.m.
+// Technique   hash-map-lookup
+// Time        O(N + Q)
+// Space       O(N)
+// Insight     The implementation utilizes a hash map to achieve constant-time average retrieval for phone book entries, mapping unique names to their corresponding eight-digit phone numbers.
+// Interview   Before: "I would use a nested loop to search the list for each query." After: "Using a HashMap reduces the lookup time to O(1) per query, resulting in O(N + Q) total time complexity, where N is the number of entries and Q is the number of queries."
+// Pitfalls    (1) Failing to handle the end-of-file condition correctly when reading queries using Scanner.  (2) Ignoring potential empty lines in the input stream which may cause incorrect query processing.  (3) Assuming names are unique without considering that the problem statement implies a direct mapping.
 // ──────────────────────────────────────────────────
 
 import java.util.*;
