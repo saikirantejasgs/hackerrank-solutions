@@ -7,6 +7,12 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-10-29, 12:25 a.m.
+// Technique   regex-backreference-replacement
+// Time        O(N * M) where N is the number of sente…
+// Space       O(M) for storing the regex match and mo…
+// Insight     The regex uses a capturing group and a backreference to identify repeated word sequences, while the case-insensitive flag ensures that variations in capitalization are treated as identical tokens.
+// Interview   Before: "How do I remove duplicate words while keeping the first occurrence?" After: "Use a regex with a backreference to find repeated words, then replace the entire match with the first captured group. This approach runs in O(N * M) time, effectively handling case-insensitive duplicates as required by the problem constraints."
+// Pitfalls    (1) Failing to use the \b word boundary anchor, which causes the regex to match substrings within larger words.  (2) Forgetting the Pattern.CASE_INSENSITIVE flag, which prevents the regex from identifying words with different casing as duplicates.  (3) Using replaceAll incorrectly by not capturing the first word instance to preserve the original casing of the first occurrence.
 // ──────────────────────────────────────────────────
 
 import java.util.Scanner;
